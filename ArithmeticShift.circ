@@ -61,63 +61,45 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(440,340)" to="(500,340)"/>
-    <wire from="(440,270)" to="(500,270)"/>
-    <wire from="(380,260)" to="(380,330)"/>
-    <wire from="(550,150)" to="(570,150)"/>
-    <wire from="(380,260)" to="(400,260)"/>
-    <wire from="(380,330)" to="(400,330)"/>
-    <wire from="(190,310)" to="(190,350)"/>
-    <wire from="(170,260)" to="(380,260)"/>
-    <wire from="(190,280)" to="(400,280)"/>
-    <wire from="(190,350)" to="(400,350)"/>
-    <wire from="(590,70)" to="(630,70)"/>
-    <wire from="(590,140)" to="(630,140)"/>
-    <wire from="(380,170)" to="(550,170)"/>
-    <wire from="(120,310)" to="(190,310)"/>
-    <wire from="(550,150)" to="(550,170)"/>
-    <wire from="(190,280)" to="(190,310)"/>
-    <wire from="(380,170)" to="(380,260)"/>
-    <comp lib="0" loc="(630,70)" name="Pin">
+    <wire from="(180,270)" to="(240,270)"/>
+    <wire from="(180,160)" to="(240,160)"/>
+    <wire from="(280,170)" to="(310,170)"/>
+    <wire from="(280,280)" to="(310,280)"/>
+    <wire from="(310,240)" to="(340,240)"/>
+    <wire from="(310,200)" to="(340,200)"/>
+    <wire from="(70,290)" to="(220,290)"/>
+    <wire from="(310,240)" to="(310,280)"/>
+    <wire from="(220,180)" to="(220,290)"/>
+    <wire from="(220,180)" to="(240,180)"/>
+    <wire from="(220,290)" to="(240,290)"/>
+    <wire from="(180,220)" to="(180,270)"/>
+    <wire from="(140,220)" to="(180,220)"/>
+    <wire from="(310,170)" to="(310,200)"/>
+    <wire from="(180,160)" to="(180,220)"/>
+    <comp lib="0" loc="(340,200)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="LSR CARRY"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ASL"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(570,150)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(170,260)" name="Pin">
+    <comp lib="0" loc="(140,220)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="IN"/>
     </comp>
-    <comp lib="0" loc="(630,140)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="LSL CARRY"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="3" loc="(280,280)" name="Shifter">
+      <a name="shift" val="ar"/>
     </comp>
-    <comp lib="3" loc="(440,270)" name="Shifter"/>
-    <comp lib="3" loc="(440,340)" name="Shifter">
-      <a name="shift" val="lr"/>
-    </comp>
-    <comp lib="0" loc="(500,340)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="LSR"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(120,310)" name="Constant">
+    <comp lib="3" loc="(280,170)" name="Shifter"/>
+    <comp lib="0" loc="(70,290)" name="Constant">
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(500,270)" name="Pin">
+    <comp lib="0" loc="(340,240)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
-      <a name="label" val="LSL"/>
+      <a name="label" val="ASR"/>
       <a name="labelloc" val="east"/>
     </comp>
   </circuit>
