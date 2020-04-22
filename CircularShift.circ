@@ -61,101 +61,110 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(130,220)" to="(130,290)"/>
-    <wire from="(220,70)" to="(280,70)"/>
-    <wire from="(220,90)" to="(280,90)"/>
-    <wire from="(220,140)" to="(270,140)"/>
-    <wire from="(270,140)" to="(270,150)"/>
-    <wire from="(130,220)" to="(170,220)"/>
-    <wire from="(130,340)" to="(170,340)"/>
-    <wire from="(130,180)" to="(170,180)"/>
-    <wire from="(170,150)" to="(170,180)"/>
-    <wire from="(50,360)" to="(150,360)"/>
-    <wire from="(280,310)" to="(320,310)"/>
-    <wire from="(280,270)" to="(320,270)"/>
-    <wire from="(190,140)" to="(220,140)"/>
-    <wire from="(190,70)" to="(220,70)"/>
-    <wire from="(190,130)" to="(280,130)"/>
-    <wire from="(320,80)" to="(350,80)"/>
-    <wire from="(320,140)" to="(350,140)"/>
-    <wire from="(130,180)" to="(130,220)"/>
-    <wire from="(220,140)" to="(220,180)"/>
-    <wire from="(220,30)" to="(220,70)"/>
-    <wire from="(280,310)" to="(280,350)"/>
-    <wire from="(280,230)" to="(280,270)"/>
-    <wire from="(110,290)" to="(130,290)"/>
-    <wire from="(150,240)" to="(170,240)"/>
-    <wire from="(150,360)" to="(170,360)"/>
-    <wire from="(130,290)" to="(130,340)"/>
-    <wire from="(220,90)" to="(220,140)"/>
-    <wire from="(270,150)" to="(280,150)"/>
-    <wire from="(220,180)" to="(230,180)"/>
-    <wire from="(220,30)" to="(230,30)"/>
-    <wire from="(210,230)" to="(280,230)"/>
-    <wire from="(210,350)" to="(280,350)"/>
-    <wire from="(150,240)" to="(150,360)"/>
-    <comp lib="0" loc="(110,290)" name="Pin">
+    <wire from="(280,230)" to="(280,300)"/>
+    <wire from="(530,250)" to="(530,260)"/>
+    <wire from="(480,200)" to="(540,200)"/>
+    <wire from="(140,380)" to="(200,380)"/>
+    <wire from="(480,250)" to="(530,250)"/>
+    <wire from="(160,230)" to="(280,230)"/>
+    <wire from="(140,280)" to="(190,280)"/>
+    <wire from="(280,420)" to="(280,440)"/>
+    <wire from="(140,260)" to="(140,280)"/>
+    <wire from="(160,400)" to="(200,400)"/>
+    <wire from="(140,260)" to="(430,260)"/>
+    <wire from="(60,230)" to="(160,230)"/>
+    <wire from="(450,240)" to="(540,240)"/>
+    <wire from="(450,180)" to="(540,180)"/>
+    <wire from="(450,250)" to="(480,250)"/>
+    <wire from="(200,360)" to="(610,360)"/>
+    <wire from="(140,280)" to="(140,380)"/>
+    <wire from="(160,230)" to="(160,400)"/>
+    <wire from="(580,190)" to="(610,190)"/>
+    <wire from="(580,250)" to="(610,250)"/>
+    <wire from="(120,280)" to="(140,280)"/>
+    <wire from="(280,400)" to="(610,400)"/>
+    <wire from="(480,200)" to="(480,250)"/>
+    <wire from="(280,440)" to="(550,440)"/>
+    <wire from="(290,320)" to="(550,320)"/>
+    <wire from="(530,260)" to="(540,260)"/>
+    <wire from="(200,300)" to="(200,360)"/>
+    <comp lib="0" loc="(430,260)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(290,320)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(610,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="CSR OVERFLOW"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(120,280)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="IN"/>
     </comp>
-    <comp lib="0" loc="(170,150)" name="Splitter">
+    <comp lib="0" loc="(190,280)" name="Splitter">
+      <a name="facing" val="south"/>
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(230,30)" name="Pin">
+    <comp lib="0" loc="(280,420)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(550,320)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="CSL"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(580,250)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(610,400)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="CSR CARRY"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(320,140)" name="XOR Gate">
+    <comp lib="0" loc="(60,230)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="C"/>
+    </comp>
+    <comp lib="1" loc="(580,190)" name="XOR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="3" loc="(210,230)" name="Shifter">
-      <a name="shift" val="rl"/>
+    <comp lib="0" loc="(610,360)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="CSL CARRY"/>
+      <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(320,310)" name="Pin">
+    <comp lib="0" loc="(550,440)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
       <a name="label" val="CSR"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(350,80)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="CSR OVERFLOW"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="0" loc="(200,380)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(230,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="CSL CARRY"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(350,140)" name="Pin">
+    <comp lib="0" loc="(610,250)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="CSL OVERFLOW"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(320,80)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="3" loc="(210,350)" name="Shifter">
-      <a name="shift" val="rr"/>
-    </comp>
-    <comp lib="0" loc="(50,360)" name="Constant">
-      <a name="width" val="3"/>
-    </comp>
-    <comp lib="0" loc="(320,270)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="CSL"/>
       <a name="labelloc" val="east"/>
     </comp>
   </circuit>
