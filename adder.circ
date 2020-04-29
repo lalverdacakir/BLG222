@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
-  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-
-  <lib desc="#Wiring" name="0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="facing" val="south"/>
+    </tool>
+    <tool name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="OutFlag [ZCNO]"/>
+      <a name="labelloc" val="south"/>
     </tool>
     <tool name="Clock">
       <a name="facing" val="north"/>
@@ -124,7 +131,6 @@
     <wire from="(510,120)" to="(800,120)"/>
     <wire from="(860,50)" to="(860,70)"/>
     <wire from="(670,330)" to="(670,410)"/>
-    <wire from="(850,380)" to="(850,530)"/>
     <wire from="(260,100)" to="(300,100)"/>
     <wire from="(620,630)" to="(620,650)"/>
     <wire from="(700,310)" to="(700,330)"/>
@@ -137,6 +143,7 @@
     <wire from="(790,340)" to="(790,380)"/>
     <wire from="(670,530)" to="(690,530)"/>
     <wire from="(350,120)" to="(380,120)"/>
+    <wire from="(850,380)" to="(850,550)"/>
     <wire from="(440,320)" to="(650,320)"/>
     <wire from="(510,120)" to="(510,550)"/>
     <wire from="(420,120)" to="(440,120)"/>
@@ -160,45 +167,27 @@
       <a name="tristate" val="false"/>
       <a name="label" val="Overflow"/>
     </comp>
-    <comp lib="0" loc="(840,30)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Cin"/>
+    <comp lib="1" loc="(690,670)" name="AND Gate">
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(730,310)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(830,320)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Output"/>
+    <comp lib="0" loc="(850,550)" name="Constant">
+      <a name="facing" val="north"/>
     </comp>
-    <comp lib="1" loc="(690,460)" name="AND Gate">
+    <comp lib="0" loc="(840,30)" name="Pin">
       <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Cin"/>
     </comp>
     <comp lib="0" loc="(120,100)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="A"/>
     </comp>
-    <comp lib="2" loc="(810,320)" name="Multiplexer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(870,30)" name="Constant">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(690,670)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="2" loc="(420,120)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="2" loc="(540,650)" name="Multiplexer">
+    <comp lib="2" loc="(850,110)" name="Multiplexer">
       <a name="facing" val="south"/>
       <a name="select" val="2"/>
     </comp>
@@ -208,10 +197,43 @@
       <a name="tristate" val="false"/>
       <a name="label" val="Cout"/>
     </comp>
+    <comp lib="2" loc="(810,320)" name="Multiplexer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="2" loc="(420,120)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(830,320)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Output"/>
+    </comp>
+    <comp lib="0" loc="(290,550)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Funsel(last2)"/>
+    </comp>
+    <comp lib="0" loc="(770,20)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(690,460)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="3" loc="(690,310)" name="Adder"/>
     <comp lib="1" loc="(640,530)" name="NOT Gate">
       <a name="facing" val="west"/>
     </comp>
-    <comp lib="2" loc="(850,110)" name="Multiplexer">
+    <comp lib="0" loc="(870,30)" name="Constant">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(350,120)" name="NOT Gate">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="2" loc="(540,650)" name="Multiplexer">
       <a name="facing" val="south"/>
       <a name="select" val="2"/>
     </comp>
@@ -219,23 +241,6 @@
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="B"/>
-    </comp>
-    <comp lib="0" loc="(850,530)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="EN"/>
-    </comp>
-    <comp lib="0" loc="(770,20)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="3" loc="(690,310)" name="Adder"/>
-    <comp lib="0" loc="(290,550)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Funsel(last2)"/>
-    </comp>
-    <comp lib="1" loc="(350,120)" name="NOT Gate">
-      <a name="width" val="8"/>
     </comp>
   </circuit>
 </project>
