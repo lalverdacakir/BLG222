@@ -66,7 +66,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="file#PART 2B.circ" name="8"/>
   <lib desc="file#PART 2C.circ" name="9"/>
   <lib desc="file#Part1.circ" name="10"/>
-  <lib desc="file#CU_updated.circ" name="11"/>
+  <lib desc="file#CU_updated_last.circ" name="11"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -230,56 +230,57 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(840,360)" to="(840,610)"/>
     <wire from="(930,640)" to="(940,640)"/>
     <wire from="(290,190)" to="(360,190)"/>
-    <comp lib="0" loc="(1420,170)" name="Tunnel">
-      <a name="label" val="L/H"/>
+    <comp lib="0" loc="(460,70)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="MuxCSel"/>
     </comp>
-    <comp lib="0" loc="(650,210)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="4"/>
-      <a name="label" val="FunSel(ALU)"/>
+    <comp lib="0" loc="(260,780)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Enable(2C)"/>
     </comp>
-    <comp lib="0" loc="(1410,430)" name="Tunnel">
+    <comp lib="4" loc="(1020,590)" name="RAM">
+      <a name="bus" val="separate"/>
+    </comp>
+    <comp lib="0" loc="(470,420)" name="Tunnel">
+      <a name="facing" val="south"/>
       <a name="width" val="2"/>
-      <a name="label" val="FunSel(2A)"/>
-    </comp>
-    <comp lib="0" loc="(1420,470)" name="Tunnel">
-      <a name="label" val="Read"/>
-    </comp>
-    <comp lib="0" loc="(440,320)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="2"/>
-      <a name="label" val="FunSel(2A)"/>
-    </comp>
-    <comp lib="0" loc="(1400,130)" name="Tunnel">
-      <a name="label" val="EnableRAM"/>
-    </comp>
-    <comp lib="0" loc="(1410,190)" name="Tunnel">
-      <a name="width" val="2"/>
-      <a name="label" val="FunSel(2C)"/>
+      <a name="label" val="MuxBSel"/>
     </comp>
     <comp lib="0" loc="(1400,290)" name="Tunnel">
       <a name="label" val="Enable(MuxC)"/>
     </comp>
-    <comp lib="0" loc="(400,70)" name="Tunnel">
+    <comp lib="0" loc="(780,150)" name="Tunnel">
+      <a name="label" val="Z"/>
+    </comp>
+    <comp lib="0" loc="(590,670)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="2"/>
+      <a name="label" val="OutDSel"/>
+    </comp>
+    <comp lib="0" loc="(1420,490)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="RegSel(2B)"/>
+    </comp>
+    <comp lib="0" loc="(590,640)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="2"/>
+      <a name="label" val="OutCSel"/>
+    </comp>
+    <comp lib="0" loc="(700,480)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="CLK"/>
     </comp>
-    <comp lib="0" loc="(1150,180)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLK"/>
+    <comp lib="0" loc="(40,70)" name="Clock">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(970,640)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="Read"/>
     </comp>
     <comp lib="0" loc="(430,910)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="width" val="16"/>
       <a name="label" val="IR"/>
-    </comp>
-    <comp lib="0" loc="(940,670)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="EnableRAM"/>
-    </comp>
-    <comp lib="0" loc="(1410,390)" name="Tunnel">
-      <a name="width" val="4"/>
-      <a name="label" val="FunSel(ALU)"/>
     </comp>
     <comp lib="0" loc="(1410,370)" name="Tunnel">
       <a name="label" val="Enable(MuxA)"/>
@@ -288,16 +289,111 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="2"/>
       <a name="label" val="MuxASel"/>
     </comp>
-    <comp lib="7" loc="(480,140)" name="main"/>
-    <comp lib="0" loc="(700,480)" name="Tunnel">
+    <comp lib="0" loc="(550,420)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="Enable(MuxB)"/>
+    </comp>
+    <comp lib="0" loc="(560,70)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="Enable(MuxC)"/>
+    </comp>
+    <comp lib="9" loc="(450,850)" name="main"/>
+    <comp lib="0" loc="(1410,430)" name="Tunnel">
+      <a name="width" val="2"/>
+      <a name="label" val="FunSel(2A)"/>
+    </comp>
+    <comp lib="2" loc="(310,450)" name="Multiplexer">
+      <a name="facing" val="west"/>
+      <a name="select" val="2"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(650,210)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="4"/>
+      <a name="label" val="FunSel(ALU)"/>
+    </comp>
+    <comp lib="0" loc="(510,320)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="4"/>
+      <a name="label" val="RegSel(2A)"/>
+    </comp>
+    <comp lib="0" loc="(400,70)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(1420,270)" name="Tunnel">
+      <a name="label" val="MuxCSel"/>
+    </comp>
+    <comp lib="7" loc="(480,140)" name="main"/>
+    <comp lib="0" loc="(1140,150)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="IR"/>
+    </comp>
+    <comp lib="0" loc="(1420,530)" name="Tunnel">
+      <a name="width" val="2"/>
+      <a name="label" val="OutBSel"/>
+    </comp>
+    <comp lib="0" loc="(1410,190)" name="Tunnel">
+      <a name="width" val="2"/>
+      <a name="label" val="FunSel(2C)"/>
+    </comp>
+    <comp lib="0" loc="(1410,410)" name="Tunnel">
+      <a name="width" val="2"/>
+      <a name="label" val="FunSel(2B)"/>
     </comp>
     <comp lib="11" loc="(1370,110)" name="main"/>
     <comp lib="0" loc="(600,600)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Enable(2B)"/>
     </comp>
+    <comp lib="2" loc="(560,540)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="2"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(740,140)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="right"/>
+    </comp>
+    <comp lib="0" loc="(1410,150)" name="Tunnel">
+      <a name="width" val="2"/>
+      <a name="label" val="OutDSel"/>
+    </comp>
+    <comp lib="0" loc="(1430,450)" name="Tunnel">
+      <a name="label" val="Load"/>
+    </comp>
+    <comp lib="8" loc="(740,530)" name="main"/>
+    <comp lib="0" loc="(240,840)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="L/H"/>
+    </comp>
+    <comp lib="0" loc="(1420,170)" name="Tunnel">
+      <a name="label" val="L/H"/>
+    </comp>
+    <comp lib="0" loc="(1420,470)" name="Tunnel">
+      <a name="label" val="Read"/>
+    </comp>
+    <comp lib="0" loc="(290,470)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Enable(MuxA)"/>
+    </comp>
+    <comp lib="0" loc="(1420,310)" name="Tunnel">
+      <a name="width" val="2"/>
+      <a name="label" val="MuxBSel"/>
+    </comp>
+    <comp lib="0" loc="(370,320)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="2"/>
+      <a name="label" val="OutBSel"/>
+    </comp>
+    <comp lib="0" loc="(270,500)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="2"/>
+      <a name="label" val="MuxASel"/>
+    </comp>
+    <comp lib="10" loc="(700,130)" name="main"/>
     <comp lib="0" loc="(380,890)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="incoming" val="16"/>
@@ -317,29 +413,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit14" val="1"/>
       <a name="bit15" val="1"/>
     </comp>
-    <comp lib="0" loc="(270,500)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="2"/>
-      <a name="label" val="MuxASel"/>
-    </comp>
-    <comp lib="0" loc="(460,70)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="MuxCSel"/>
-    </comp>
-    <comp lib="0" loc="(1140,150)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="IR"/>
-    </comp>
-    <comp lib="0" loc="(390,750)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="CLK"/>
-    </comp>
-    <comp lib="2" loc="(560,540)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="2"/>
-      <a name="width" val="8"/>
-    </comp>
     <comp lib="0" loc="(330,940)" name="Pin">
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
@@ -352,6 +425,29 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="3"/>
       <a name="label" val="RegSel(2B)"/>
     </comp>
+    <comp lib="0" loc="(390,750)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(440,320)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="2"/>
+      <a name="label" val="FunSel(2A)"/>
+    </comp>
+    <comp lib="0" loc="(240,690)" name="Constant"/>
+    <comp lib="0" loc="(370,290)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="2"/>
+      <a name="label" val="OutASel"/>
+    </comp>
+    <comp lib="0" loc="(1410,330)" name="Tunnel">
+      <a name="label" val="Enable(MuxB)"/>
+    </comp>
+    <comp lib="0" loc="(260,810)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="2"/>
+      <a name="label" val="FunSel(2C)"/>
+    </comp>
     <comp lib="2" loc="(570,130)" name="Multiplexer">
       <a name="selloc" val="tr"/>
       <a name="width" val="8"/>
@@ -360,154 +456,58 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="north"/>
       <a name="label" val="CLK"/>
     </comp>
-    <comp lib="2" loc="(310,450)" name="Multiplexer">
-      <a name="facing" val="west"/>
-      <a name="select" val="2"/>
-      <a name="width" val="8"/>
+    <comp lib="0" loc="(1410,250)" name="Tunnel">
+      <a name="label" val="Enable(2A)"/>
     </comp>
     <comp lib="0" loc="(280,160)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Enable(2A)"/>
     </comp>
+    <comp lib="0" loc="(1400,110)" name="Tunnel">
+      <a name="label" val="Enable(2C)"/>
+    </comp>
+    <comp lib="0" loc="(1410,390)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="FunSel(ALU)"/>
+    </comp>
     <comp lib="0" loc="(910,640)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="Load"/>
-    </comp>
-    <comp lib="8" loc="(740,530)" name="main"/>
-    <comp lib="0" loc="(740,140)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-      <a name="appear" val="right"/>
-    </comp>
-    <comp lib="0" loc="(290,470)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Enable(MuxA)"/>
-    </comp>
-    <comp lib="0" loc="(1420,270)" name="Tunnel">
-      <a name="label" val="MuxCSel"/>
     </comp>
     <comp lib="0" loc="(1420,550)" name="Tunnel">
       <a name="width" val="2"/>
       <a name="label" val="OutASel"/>
     </comp>
-    <comp lib="0" loc="(260,810)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="2"/>
-      <a name="label" val="FunSel(2C)"/>
+    <comp lib="0" loc="(1410,210)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="RegSel(2A)"/>
     </comp>
-    <comp lib="0" loc="(550,420)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="Enable(MuxB)"/>
-    </comp>
-    <comp lib="0" loc="(240,690)" name="Constant"/>
-    <comp lib="0" loc="(240,840)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="L/H"/>
-    </comp>
-    <comp lib="10" loc="(700,130)" name="main"/>
-    <comp lib="0" loc="(780,150)" name="Tunnel">
-      <a name="label" val="Z"/>
-    </comp>
-    <comp lib="0" loc="(1410,410)" name="Tunnel">
-      <a name="width" val="2"/>
-      <a name="label" val="FunSel(2B)"/>
-    </comp>
-    <comp lib="0" loc="(1420,490)" name="Tunnel">
-      <a name="width" val="3"/>
-      <a name="label" val="RegSel(2B)"/>
-    </comp>
-    <comp lib="0" loc="(370,320)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="2"/>
-      <a name="label" val="OuBSel"/>
-    </comp>
-    <comp lib="0" loc="(590,670)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="2"/>
-      <a name="label" val="OutDSel"/>
-    </comp>
-    <comp lib="0" loc="(970,640)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="Read"/>
-    </comp>
-    <comp lib="0" loc="(1410,250)" name="Tunnel">
-      <a name="label" val="Enable(2A)"/>
+    <comp lib="0" loc="(1400,130)" name="Tunnel">
+      <a name="label" val="EnableRAM"/>
     </comp>
     <comp lib="0" loc="(1140,120)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Z"/>
     </comp>
-    <comp lib="9" loc="(450,850)" name="main"/>
-    <comp lib="0" loc="(1410,210)" name="Tunnel">
-      <a name="width" val="4"/>
-      <a name="label" val="RegSel(2A)"/>
-    </comp>
-    <comp lib="0" loc="(1420,530)" name="Tunnel">
-      <a name="width" val="2"/>
-      <a name="label" val="OutBSel"/>
-    </comp>
-    <comp lib="0" loc="(470,420)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="2"/>
-      <a name="label" val="MuxBSel"/>
-    </comp>
-    <comp lib="0" loc="(370,290)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="2"/>
-      <a name="label" val="OutASel"/>
-    </comp>
-    <comp lib="0" loc="(40,70)" name="Clock">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="4" loc="(1020,590)" name="RAM">
-      <a name="bus" val="separate"/>
-    </comp>
-    <comp lib="0" loc="(510,320)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="4"/>
-      <a name="label" val="RegSel(2A)"/>
-    </comp>
-    <comp lib="0" loc="(1400,110)" name="Tunnel">
-      <a name="label" val="Enable(2C)"/>
-    </comp>
-    <comp lib="0" loc="(1430,450)" name="Tunnel">
-      <a name="label" val="Load"/>
-    </comp>
-    <comp lib="0" loc="(260,780)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Enable(2C)"/>
-    </comp>
-    <comp lib="0" loc="(560,70)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="Enable(MuxC)"/>
-    </comp>
-    <comp lib="0" loc="(1410,230)" name="Tunnel">
-      <a name="label" val="Enable(2B)"/>
-    </comp>
-    <comp lib="0" loc="(590,640)" name="Tunnel">
-      <a name="facing" val="east"/>
+    <comp lib="0" loc="(1420,510)" name="Tunnel">
       <a name="width" val="2"/>
       <a name="label" val="OutCSel"/>
+    </comp>
+    <comp lib="0" loc="(1150,180)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLK"/>
     </comp>
     <comp lib="0" loc="(700,670)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="width" val="2"/>
       <a name="label" val="FunSel(2B)"/>
     </comp>
-    <comp lib="0" loc="(1410,150)" name="Tunnel">
-      <a name="width" val="2"/>
-      <a name="label" val="OutDSel"/>
+    <comp lib="0" loc="(940,670)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="EnableRAM"/>
     </comp>
-    <comp lib="0" loc="(1410,330)" name="Tunnel">
-      <a name="label" val="Enable(MuxB)"/>
-    </comp>
-    <comp lib="0" loc="(1420,310)" name="Tunnel">
-      <a name="width" val="2"/>
-      <a name="label" val="MuxBSel"/>
-    </comp>
-    <comp lib="0" loc="(1420,510)" name="Tunnel">
-      <a name="width" val="2"/>
-      <a name="label" val="OutCSel"/>
+    <comp lib="0" loc="(1410,230)" name="Tunnel">
+      <a name="label" val="Enable(2B)"/>
     </comp>
   </circuit>
 </project>
