@@ -6750,7 +6750,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="0" loc="(11450,740)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="T4"/>
+      <a name="label" val="T5"/>
     </comp>
     <comp lib="0" loc="(4100,650)" name="Tunnel">
       <a name="facing" val="east"/>
