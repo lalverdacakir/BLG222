@@ -826,7 +826,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(13730,2460)" to="(13730,2470)"/>
     <wire from="(13720,2950)" to="(13800,2950)"/>
     <wire from="(1180,780)" to="(1260,780)"/>
-    <wire from="(11220,140)" to="(11220,150)"/>
     <wire from="(8030,2780)" to="(8030,2810)"/>
     <wire from="(310,300)" to="(450,300)"/>
     <wire from="(13980,810)" to="(13980,2250)"/>
@@ -1893,6 +1892,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(9070,1270)" to="(9140,1270)"/>
     <wire from="(12450,310)" to="(12650,310)"/>
     <wire from="(3360,1960)" to="(3370,1960)"/>
+    <wire from="(11270,190)" to="(11300,190)"/>
     <wire from="(12370,2210)" to="(12640,2210)"/>
     <wire from="(13670,2620)" to="(13670,2650)"/>
     <wire from="(13640,1150)" to="(13740,1150)"/>
@@ -2274,7 +2274,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(6350,1450)" to="(6370,1450)"/>
     <wire from="(12600,440)" to="(12600,1770)"/>
     <wire from="(8120,1630)" to="(8130,1630)"/>
-    <wire from="(11130,140)" to="(11220,140)"/>
     <wire from="(580,1610)" to="(620,1610)"/>
     <wire from="(8080,1570)" to="(8110,1570)"/>
     <wire from="(1930,1980)" to="(1990,1980)"/>
@@ -3450,9 +3449,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(9020,1100)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Opcode 9+10"/>
-    </comp>
-    <comp lib="0" loc="(11270,190)" name="Tunnel">
-      <a name="label" val="Rewind"/>
     </comp>
     <comp lib="0" loc="(1370,1710)" name="Tunnel">
       <a name="label" val="Opcode 9+10"/>
@@ -5458,6 +5454,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="T5"/>
     </comp>
     <comp lib="1" loc="(9940,1270)" name="NOT Gate"/>
+    <comp lib="0" loc="(11300,190)" name="Tunnel">
+      <a name="label" val="Rewind"/>
+    </comp>
     <comp lib="1" loc="(13680,2350)" name="NOT Gate"/>
     <comp lib="0" loc="(520,770)" name="Tunnel">
       <a name="label" val="Opcode15"/>
@@ -7567,7 +7566,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="0" loc="(1950,1260)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="T5"/>
+      <a name="label" val="T4"/>
     </comp>
     <comp lib="1" loc="(14100,3760)" name="OR Gate"/>
     <comp lib="0" loc="(4410,2770)" name="Tunnel">

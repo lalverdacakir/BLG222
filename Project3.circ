@@ -6,7 +6,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="south"/>
     </tool>
     <tool name="Pin">
-      <a name="label" val="EN"/>
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="OutFlag [ZCNO]"/>
+      <a name="labelloc" val="south"/>
     </tool>
     <tool name="Tunnel">
       <a name="facing" val="east"/>
@@ -23,15 +28,17 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   </lib>
   <lib desc="#Gates" name="1">
     <tool name="AND Gate">
-      <a name="inputs" val="4"/>
+      <a name="inputs" val="3"/>
     </tool>
     <tool name="OR Gate">
+      <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </tool>
     <tool name="NOR Gate">
       <a name="inputs" val="8"/>
     </tool>
     <tool name="XOR Gate">
+      <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </tool>
     <tool name="Controlled Buffer">
@@ -231,7 +238,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(840,360)" to="(840,610)"/>
     <wire from="(930,640)" to="(940,640)"/>
     <wire from="(290,190)" to="(360,190)"/>
-    <comp lib="10" loc="(700,130)" name="main"/>
     <comp lib="0" loc="(780,670)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="width" val="3"/>
@@ -333,7 +339,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="south"/>
       <a name="label" val="CLK"/>
     </comp>
-    <comp lib="11" loc="(1370,110)" name="main"/>
     <comp lib="2" loc="(560,540)" name="Multiplexer">
       <a name="selloc" val="tr"/>
       <a name="select" val="2"/>
@@ -393,6 +398,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="2"/>
       <a name="label" val="FunSel(2C)"/>
     </comp>
+    <comp lib="11" loc="(1370,110)" name="main"/>
     <comp lib="0" loc="(280,160)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Enable(2A)"/>
@@ -467,6 +473,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(1410,330)" name="Tunnel">
       <a name="label" val="Enable(MuxB)"/>
     </comp>
+    <comp lib="10" loc="(700,130)" name="main"/>
     <comp lib="0" loc="(1410,390)" name="Tunnel">
       <a name="width" val="4"/>
       <a name="label" val="FunSel(ALU)"/>
